@@ -1,0 +1,119 @@
+
+// #ffffff
+// #f8e6fb
+// #e2c7ed
+// #d4b0e2
+// #5b263a
+// #000000
+
+$colot-main-fill: #f8e6fb;
+$color-borders: #d4b0e2;
+
+@mixin clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+html {
+  font-size: 0.625rem; /* 10px equivalent thanks to default of 16px */
+  * {
+    box-sizing: border-box;
+  }
+}
+
+body {
+  font-size: 1.4rem; /* 14px equivalent */
+}
+
+.page-header {
+  padding: 1.8rem;
+  border-bottom: .1rem solid $color-borders;
+  background: $colot-main-fill;
+  @include clearfix;
+
+  h1 {
+    margin: 0;
+    padding: 0;
+    font-weight: 200;
+    letter-spacing: .6rem;
+    font-size: 2rem;
+    line-height: 2rem;
+    color: $color-borders;
+    float: left;
+    height: 100%;
+  }
+
+  .username {
+    float: right;
+    line-height: 2rem;
+  }
+}
+
+input {
+  padding: .8rem;
+  font-size: 1.8rem;
+}
+button {
+  padding: .8rem;
+  font-size: 1.8rem;
+}
+
+.view-login {
+  padding: 2rem;
+}
+
+.form-chat-input {
+  width: 100%;
+  padding: 1rem;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  border-top: .1rem solid $color-borders;
+  background: $colot-main-fill;
+
+  input {
+    flex: 1;
+    padding: 1rem;
+    font-size: 1.8rem;
+  }
+  button {
+    padding: 1rem;
+    font-size: 1.8rem;
+  }
+}
+
+.chat-messages {
+  padding: 0 2rem;
+}
+
+.message {
+  margin-bottom: 3rem;
+  border-top: 1px solid #eee;
+  padding-top: 2rem;
+
+  p {
+    margin: 0;
+  }
+
+  .messages-meta {
+
+  }
+
+  .message-author {
+    display: inline-block;
+    font-weight: bold;
+  }
+  .message-timestamp {
+    display: inline-block;
+    color: #ccc;
+  }
+  .message-body {
+    clear: both;
+    font-weight: 200;
+    font-size: 2.4rem;
+  }
+}
